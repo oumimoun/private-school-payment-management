@@ -1,0 +1,106 @@
+/**
+ * Custom Styles for Google Amp example
+ */
+
+// CSS Variables
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  --font-family: "Calistoga", serif;
+  --font-weight: 400;
+}
+
+// Layout
+body {
+  padding-top: calc(1rem + var(--spacing) * 2);
+}
+
+body > nav {
+  background-color: var(--card-background-color);
+  box-shadow: var(--card-box-shadow);
+}
+
+// Button
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+a[role="button"] {
+  font-family: "Calistoga", serif;
+  --font-weight: 400;
+}
+
+// Nav
+nav button,
+nav button:hover,
+nav button:active,
+nav button:focus {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+// Fixed navbar
+body > nav {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0 var(--spacing);
+
+  h1 {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+  }
+
+  a,
+  button {
+    color: var(--secondary);
+  }
+}
+
+// Sidebar
+amp-sidebar {
+  position: relative;
+  padding: 1rem;
+  background-color: var(--primary);
+  box-shadow: var(--card-box-shadow);
+
+  button {
+    position: absolute;
+    top: var(--spacing);
+    right: var(--spacing);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 2rem;
+    line-height: 1;
+  }
+
+  aside {
+    min-width: 12rem;
+    margin-top: var(--typography-spacing-vertical);
+  }
+
+  h3,
+  a,
+  a:hover,
+  a:active,
+  a:focus {
+    color: var(--primary-inverse);
+  }
+}
+
+// Icons
+amp-sidebar,
+body > nav {
+  svg {
+    height: 1rem;
+  }
+}
